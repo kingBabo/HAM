@@ -3,7 +3,6 @@ const morgan = require('morgan')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const app = express()
-
 const warhouseRoutes = require('./api/routes/warehouses')
 const employeesRoutes = require('./api/routes/employees')
 const itemRoutes = require('./api/routes/items')
