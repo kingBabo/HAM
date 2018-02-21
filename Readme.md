@@ -1,6 +1,6 @@
 # HAM - Case
 
-Hilton Asset Managements egna rest api. Utvecklat med hjälp i en NodeJS miljö och med en mongoDB databas.
+Hilton Asset Managements egna rest api. Utvecklat i en NodeJS miljö och med en mongoDB databas.
 
 ## Komma igång
 
