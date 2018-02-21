@@ -50,8 +50,10 @@ db.<collectionname>.find()
 
 ## Hjälpmedel
 
-* [nodeJS](https://nodejs.org/en/) - Javascript ramverket som användes
-* [Mongodb](https://www.mongodb.com/) - Dependency Management
-* [Mongoose](http://mongoosejs.com/) - Modellering för mongoDB
-
-Det användes dessutom fler mindre bibliotek som kan utforskas i koden.
+* [nodeJS](https://nodejs.org/en/) (8.7.0) - Javascript ramverket som användes
+* [Mongodb](https://www.mongodb.com/) (3.6) - Databas
+* [Express](https://expressjs.com/) (^4.16.2) - NodeJS webapplication ramverk
+* [Mongoose](http://mongoosejs.com/) (^5.0.6) - Modellering för mongoDB
+* [Body-parser](https://www.npmjs.com/package/body-parser) (^1.18.2) - Parsa JSON
+* [Morgan](https://github.com/expressjs/morgan) (^1.9.0) - Express addon för att logga
+* [Nodemon](https://nodemon.io/) (^1.15.1) - Automatiskt ladda om server på CTRL+S
