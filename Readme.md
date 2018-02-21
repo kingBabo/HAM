@@ -36,7 +36,7 @@ Servern kan nu nås via:
 localhost:4000
 ```
 
-* [Documentation](https://documenter.getpostman.com/collection/view/2904040-d125a76a-848c-4b17-ea45-c0ff43199fbc) - Autogenererad docs med Postman
+* [Documentation](https://documenter.getpostman.com/view/2904040/itcase/RVfzf8qQ) - Autogenererad docs med Postman
 
 ### Databas
 
