@@ -5,7 +5,7 @@ const Warehouse = require('../models/warehouse')
 const Employee = require('../models/employee')
 
 exports.transfer = (req, res, next) => {
-  Item.find({ id: req.body.item_id })
+  Employee.find({ id: req.body.employee_id })
     .then(employee => {
       if (!employee)
         return res.status(404).json({ message: 'Employee was not found' })

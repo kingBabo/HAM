@@ -39,7 +39,7 @@ exports.seed = () => {
       for (let i = 0; i < employees.length; i++) {
         employees[i].save((err, result) => {
           done++
-          if (done === employees.length) () => mongoose.disconnect()
+          if (done === employees.length) mongoose.disconnect()
         })
       }
     })

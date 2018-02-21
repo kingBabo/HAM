@@ -8,7 +8,7 @@ exports.getAll = (req, res, next) => {
     .exec()
     .then(docs => {
       res.status(200).json({
-        employees: docs.map(doc => {
+        data: docs.map(doc => {
           return {
             id: doc._id,
             name: doc.name,

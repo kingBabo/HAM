@@ -31,7 +31,7 @@ exports.seed = new Promise((resolve, reject) => {
       .then(res => {
         done++
         if (done === warehouses.length) {
-          ;() => mongoose.disconnect()
+          mongoose.disconnect()
           resolve(true)
         }
       })

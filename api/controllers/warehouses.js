@@ -6,7 +6,7 @@ exports.getAll = (req, res, next) => {
     .select('id name city')
     .then(docs => {
       res.status(200).json({
-        warehouses: docs.map(doc => {
+        data: docs.map(doc => {
           return {
             id: doc._id,
             name: doc.name,
@@ -32,7 +32,7 @@ exports.createNew = (req, res, next) => {
     .then(result => {
       res.status(201).json({
         message: 'A new warehouse was added to the database',
-        createdWarehouse: {
+        data: {
           id: result._id,
           name: result.name,
           city: result.city

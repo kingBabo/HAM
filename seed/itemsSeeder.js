@@ -35,7 +35,7 @@ exports.seed = () => {
       for (let i = 0; i < items.length; i++) {
         items[i].save((err, result) => {
           done++
-          if (done === items.length) () => mongoose.disconnect()
+          if (done === items.length) mongoose.disconnect()
         })
       }
     })

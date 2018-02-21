@@ -1,88 +1,57 @@
-# Project Title
+# HAM - Case
 
-One Paragraph of project description goes here
+Hilton Asset Managements egna rest api. Utvecklat med hjälp i en NodeJS miljö och med en mongoDB databas.
 
-## Getting Started
+## Komma igång
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
+Efter att du har klonat ner repot, kör följande kommando(i repot).
 
 ```
-Give examples
+npm install
 ```
 
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
+För att sedan kunna testa dem olika endpointsen måste vi seeda databasen, gör detta genom att köra följande kommando:
 
 ```
-Give the example
+node seed/seed.js
 ```
 
-And repeat
+Vill du rensa databasen kan du alltid köra:
 
 ```
-until finished
+node seed/dropdb.js
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+När du sedan har seedat databasen kan du starta server genom att köra:
 
 ```
-Give an example
+npm start
 ```
 
-### And coding style tests
+### Databas
 
-Explain what these tests test and why
+Vill du ansluta till databasen kan du göra du göra det via mongo SHELL. Kör följande kommando för att ansluta:
 
 ```
-Give an example
+mongo "mongodb://hamcluster-shard-00-00-txxmp.mongodb.net:27017,hamcluster-shard-00-01-txxmp.mongodb.net:27017,hamcluster-shard-00-02-txxmp.mongodb.net:27017/test?replicaSet=HAMCluster-shard-0" --ssl --authenticationDatabase admin --username HAM-CASE --password <PASSWORD>
 ```
 
-## Deployment
+För att se all samlingar i databasen skriver du:
 
-Add additional notes about how to deploy this on a live system
+```
+show collections
+```
 
-## Built With
+För att se innehållet i en specifik samling skriver du:
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+```
+db.<collectionname>.find()
+```
 
-## Contributing
+## Hjälpmedel
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+* [nodeJS](https://nodejs.org/en/) - Javascript ramverket som användes
+* [Mongodb](https://www.mongodb.com/) - Dependency Management
+* [Mongoose](http://mongoosejs.com/) - Modellering för mongoDB
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
-
+Det användes dessutom fler mindre bibliotek som kan utforskas i koden.

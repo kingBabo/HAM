@@ -11,8 +11,7 @@ exports.getFromWarehouse = (req, res, next) => {
           .json({ message: 'No items found in that warehouse' })
       }
       res.status(200).json({
-        count: items.length,
-        items: items.map(item => {
+        data: items.map(item => {
           return {
             id: item.id,
             name: item.name,
