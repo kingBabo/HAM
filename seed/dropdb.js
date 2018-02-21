@@ -7,8 +7,8 @@ const db = mongoose.createConnection(
 )
 
 db.dropDatabase((err, result) => {
-  if (!err)
+  if (!err) {
     console.log('Your database was succesfully deleted, please press CTRL+C')
     mongoose.disconnect()
-  else console.log(err)
+  } else console.log(err)
 })
